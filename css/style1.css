@@ -1,0 +1,64 @@
+.brand{
+    display: flex;
+}
+
+.img{
+    margin-right: auto;
+    border-radius: 100;
+    height: 30px;
+    width: 30px;
+}
+
+.header{
+    background-color: gray;
+    display: flex;
+    justify-content:space-around;
+    align-items: baseline;
+}
+
+.navbar{
+    display: flex;
+    padding: 50px 50px;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.first{
+    margin-right: 800px;
+
+}
+
+.main{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.checkbox{
+    display: inline-flex;
+}
+
+.light{
+    height: 30px;
+    width: 100px;
+}
+
+input[type=checkbox] + label {
+    color:red;
+    font-style: italic;
+  } 
+  input[type=checkbox]:checked + label {
+    color: green;
+    font-style: normal;
+  } 
+
+  .footer{
+    text-align: center;
+    background-color: gray;
+    padding: 10px;
+  }
+
