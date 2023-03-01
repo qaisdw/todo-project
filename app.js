@@ -21,6 +21,7 @@ if (x == true){
         alert("Welcome Ms "+ name );
     }
     else {
-        alert("leave !!!");
+        alert("Now leave !!!");
     }
 }
+
