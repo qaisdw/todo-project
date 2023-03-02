@@ -29,7 +29,6 @@ a{
 
 .first{
     margin-right: 800px;
-
 }
 
 .main{
@@ -42,31 +41,59 @@ a{
     display: inline-flex;
 }
 
-.light{
+/* .light{
     height: 30px;
     width: 100px;
-}
+}  */
 
-input[type=checkbox] + label {
-    color:red;
-    font-style: italic;
-  } 
-  input[type=checkbox]:checked + label {
-    color: green;
-    font-style: normal;
-  } 
-
-  .footer{
+.footer1{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     text-align: center;
     background-color: gray;
     padding: 10px;
   }
 
+.footer2{
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    background-color: gray;
+    padding: 10px;
+  }
+
+  /* table */
+
   th, td {
-    border-bottom: 1px solid #ddd;
+    border: 1px solid;
   }
 
   .center {
+    margin: 20px;
+    border-spacing: 5px;
+    border: solid;
+    table-layout: fixed;
+    width: 50%;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* btn */
+
+  .right{
+    margin: 15px;
+  }
+
+  /* box */
+
+  .color{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+    width: 30px;
+    height: 30px;
+  } 
