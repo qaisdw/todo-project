@@ -27,20 +27,25 @@
 
 alert("Please answer the next following questions in yes or no format");
 
-start();
-(()=>Traverse(start()))() // calling multiple fun in one line.
-
 let answer = [];
+
+(()=>Traverse(start()))() // calling multiple fun in one line.
 
 function start() {
 
-    //let answer = [];
-
-    answer.push(empty(prompt('You usually walk to work.')));
-    answer.push(empty(prompt('Can I grow potatoes in a pot?')));
-    answer.push(empty(empty(prompt('Can the dog swim?'))));
+    answer.push(yesNo(empty(prompt('You usually walk to work.'))));
+    answer.push(yesNo(empty(prompt('Can I grow potatoes in a pot?'))));
+    answer.push(yesNo(empty(prompt('Can the dog swim?'))));
     
     return answer;
+}
+
+function yesNo(answer){
+    if(answer=='yes'||answer=='no'){
+        return answer;
+    }else{
+        alert('invalid');
+    }
 }
 
 function empty(answer) {
