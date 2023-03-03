@@ -27,30 +27,29 @@
 
 alert("Please answer the next following questions in yes or no format");
 
-function main() {
-    let answers = start();
-    empty(answers);
-    //let answers2 = Traverse(answers1);
-}
+start();
+(()=>Traverse(start()))() // calling multiple fun in one line.
 
-main();
-
+let answer = [];
 
 function start() {
-    let answer = [];
-        answer.push(prompt('You usually walk to work.'));
-        answer.push(prompt('Can I grow potatoes in a pot?'));
-        answer.push(prompt('Can the dog swim?'));
+
+    //let answer = [];
+
+    answer.push(empty(prompt('You usually walk to work.')));
+    answer.push(empty(prompt('Can I grow potatoes in a pot?')));
+    answer.push(empty(empty(prompt('Can the dog swim?'))));
+    
     return answer;
 }
 
-function empty(answers) {
-    for (var i = 0; i < answers.length; i++) {
-        if (answers == nall) {
-            alert('invalid');
+function empty(answer) {
+    
+    for(let i = 0; i<answer.length;i++){
+
+        if (answer[i] === null && answer[i] === "null") {
+            alert('invalid');   
             window.stop();
-        } else {
-            continue
         }
     }
 }
@@ -61,4 +60,18 @@ function Traverse(answers) {
     }
     return answers;
 }
+
+// const questions = [
+//     "You usually walk to work.",
+//     "Can I grow potatoes in a pot?",
+//     "Can the dog swim?",
+//   ];
+  
+//   const answers = questions.map(q => {
+//     while(true){ // infinite loop unless we `return`
+//       const input = prompt(`${q} (Y/N)`).trim().toLowerCase();
+//       if(["y", "n"].includes(input)) return input === "y";
+//       else alert("Invalid input, please try again");
+//     }
+//   });
 
