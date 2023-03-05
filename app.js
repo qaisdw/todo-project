@@ -27,37 +27,39 @@
 
 alert("Please answer the next following questions in yes or no format");
 
-let answer = [];
+(()=>Traverse(main()))() // calling multiple fun in one line.
 
-(()=>Traverse(start()))() // calling multiple fun in one line.
+function start(questions) {
+    let answer = prompt(questions)
+    if(answer==''||answer=='null'){
+         return alert('invalid');
+    }else if(answer=='yes'||answer=='no'){
+        return answer;
+    }else{
+        alert('enter only yes or no');
+        main(questions);
+    }
+}
 
-function start() {
 
-    answer.push(yesNo(empty(prompt('You usually walk to work.'))));
-    answer.push(yesNo(empty(prompt('Can I grow potatoes in a pot?'))));
-    answer.push(yesNo(empty(prompt('Can the dog swim?'))));
-    
+
+function main() {
+
+    let answer = [];
+
+    let answer1=start ('You usually walk to work');
+    console.log(answer1);
+    answer.push(answer1);
+    let answer2=start ('Can I grow potatoes in a pot?');
+    console.log(answer2);
+    answer.push(answer2);
+    let answer3=start ('Can the dog swim?');
+    console.log(answer3);
+    answer.push(answer3);
+
     return answer;
 }
 
-function yesNo(answer){
-    if(answer=='yes'||answer=='no'){
-        return answer;
-    }else{
-        alert('invalid');
-    }
-}
-
-function empty(answer) {
-    
-    for(let i = 0; i<answer.length;i++){
-
-        if (answer[i] === null && answer[i] === "null") {
-            alert('invalid');   
-            window.stop();
-        }
-    }
-}
 
 function Traverse(answers) {
     for (var i = 0; i < answers.length; i++) {
@@ -65,18 +67,4 @@ function Traverse(answers) {
     }
     return answers;
 }
-
-// const questions = [
-//     "You usually walk to work.",
-//     "Can I grow potatoes in a pot?",
-//     "Can the dog swim?",
-//   ];
-  
-//   const answers = questions.map(q => {
-//     while(true){ // infinite loop unless we `return`
-//       const input = prompt(`${q} (Y/N)`).trim().toLowerCase();
-//       if(["y", "n"].includes(input)) return input === "y";
-//       else alert("Invalid input, please try again");
-//     }
-//   });
 
