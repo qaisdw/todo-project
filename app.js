@@ -32,11 +32,11 @@ alert("Please answer the next following questions in yes or no format");
 function start(questions) {
     let answer = prompt(questions)
     if(answer==''||answer=='null'){
-         return alert('invalid'),console.log('invalid');
+         return 'invalid';
     }else if(answer=='yes'||answer=='no'){
         return answer;
     }else{
-        alert('enter only yes or no');
+        alert('invalid, answer only in yes or no format');
         main(questions);
     }
 }
@@ -48,13 +48,13 @@ function main() {
     let answer = [];
 
     let answer1=start ('You usually walk to work');
-    console.log(answer1);
+    //console.log(answer1);
     answer.push(answer1);
     let answer2=start ('Can I grow potatoes in a pot?');
-    console.log(answer2);
+    //console.log(answer2);
     answer.push(answer2);
     let answer3=start ('Can the dog swim?');
-    console.log(answer3);
+    //console.log(answer3);
     answer.push(answer3);
 
     return answer;
