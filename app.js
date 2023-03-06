@@ -32,7 +32,7 @@ alert("Please answer the next following questions in yes or no format");
 function start(questions) {
     let answer = prompt(questions)
     if(answer==''||answer=='null'){
-         return alert('invalid');
+         return alert('invalid'),console.log('invalid');
     }else if(answer=='yes'||answer=='no'){
         return answer;
     }else{
